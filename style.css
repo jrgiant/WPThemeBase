@@ -1,0 +1,19 @@
+/*
+Theme Name: All About Them Angles
+Theme URI: http://themes.jrgiantdev.com/AllAboutThemAngles;
+Author: Joshua Rose
+Author URI: http://jrgiantdev.com
+Description: Tired of the flat boxy blogs, take angles out for a spin.
+Version: 0.0.1;
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: angles
+Text Domain: allaboutthemangles
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+body {
+  background-color: honeydew; }
+
+/*# sourceMappingURL=style.css.map */
