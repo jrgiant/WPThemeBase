@@ -1,4 +1,4 @@
-$version : "0.0.1";
+$version: "0.0.1";
 /*
 Theme Name: All About Them Angles
 Theme URI: http://themes.jrgiantdev.com/AllAboutThemAngles;
@@ -14,6 +14,25 @@ Text Domain: allaboutthemangles
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+//define breakpoints
+@import "assets/scss/scss-includes.scss";
 body {
     background-color: honeydew;
+    display: flex;
+    flex-direction: row;
+    @include media("<phone") {
+        flex-direction: column;
+    }
+
+}
+
+#main-content {
+    background-color: ghostwhite;
+    flex: 8;
+    @include media(">phone") {}
+}
+#sidebar {
+    flex:2;
+    background-color: dimgray;
 }
