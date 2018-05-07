@@ -8,9 +8,31 @@
     <?php wp_head();?>
 </head>
 <body>
-<?php
-//header bar
-
-//top-navigation  
-
+<div id="menu-bar">
+  <h1>Site Title</h1>
+  <button class="hamburger hamburger--collapse" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+</div>
+<div class="site-title">
+  <h1><?php bloginfo();?></h1>
+</div>
+<div class="navigation">
+    <?php if (get_theme_mod( 'show_top_bar', 'show' ) === "show"): ?>
+  <div class="top-bar">
+    <div class="left">Item 1</div>
+    <div class="right">Item 2</div>
+  </div>
+  <?php endif; ?>
+  <!--./top-bar-->
+  <nav>
+   <?php 
+    wp_nav_menu();
+   ?>
+  </nav>
+  
+</div>
+<div class="nav-placeholder"></div>
 
