@@ -72,7 +72,7 @@ function allaboutthemangles_is_active()
  */
 function allaboutthemangles_customize_preview_js()
 {
-    wp_enqueue_script('allaboutthemangles-customize-preview', get_theme_file_uri('/customizer/customizer-preview.js'), array('customize-preview'), '0.1.1', true);
+    wp_enqueue_script('allaboutthemangles-customize-preview', get_theme_file_uri('/customizer/customizer-preview.js'), array('customize-preview', 'aata_core_scripts'), '0.1.1', true);
 }
 add_action('customize_preview_init', 'allaboutthemangles_customize_preview_js');
 
