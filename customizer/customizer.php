@@ -66,3 +66,21 @@ function allaboutthemangles_is_active()
 {
     return true;
 }
+
+/**
+ * Add JS handlers
+ */
+function allaboutthemangles_customize_preview_js()
+{
+    wp_enqueue_script('allaboutthemangles-customize-preview', get_theme_file_uri('/customizer/customizer-preview.js'), array('customize-preview'), '0.1.1', true);
+}
+add_action('customize_preview_init', 'allaboutthemangles_customize_preview_js');
+
+/**
+ * Load dynamic logic for the customizer controls area.
+ */
+// function allaboutthemangles_panels_js()
+// {
+//     wp_enqueue_script('allaboutthemangles-customize-controls', get_theme_file_uri('/customizer/customize-controls.js'), array(), '0.1.0', true);
+// }
+// add_action('customize_controls_enqueue_scripts', 'allaboutthemangles_panels_js');
