@@ -31,3 +31,8 @@
         background-color: lighten($color: map-get($colors, darkBackground), $amount: 3) //padding: .5rem;
     }
 }
+@mixin offScreen {
+    transform: translateX(100vw);
+    transition: transform 0.3s ease-in;
+    position: fixed; //z-index:20;
+}

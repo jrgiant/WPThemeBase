@@ -4,3 +4,8 @@
 @import "includeMedia.scss";
 @import "scss-mixins.scss";
 @import "scss-functions.scss";
+
+//call in individual scss files
+@import 'navigation/top-bar.scss';
+@import 'navigation/navigation.scss'; //dependant on top-bar.scss
+@import 'navigation/menu-bar.scss';

@@ -1,0 +1,57 @@
+.navigation {
+    //margin-top:6vh;
+    @include media("<tablet") {
+        width: 94vw;
+        padding: 3vw;
+        @include offScreen;
+        background-color: map-get($colors, darkBackground); // position: absolute;
+        top: 6vh;
+    }
+    nav {
+        //border-top: 1px solid lightgrey;
+        border-bottom: 1px solid map-get($map: $colors, $key: lineAccents); //width:100%;
+        &.sticky {
+            @include media(">tablet") {
+                position: fixed;
+                top: 0px;
+                left: 0;
+                right: 0;
+                background-color: rgba(map-get($map: $colors, $key: darkBackground), .7);
+                opacity: 0;
+                transition: all .3s linear;
+                a {
+                    color: map-get($map: $colors, $key: lightText4darkBackground);
+                }
+            }
+        }
+        ul {
+            //width:100%;
+            text-align: center;
+            list-style: none;
+            padding-left: 0px;
+            @include media(">tablet") {
+                margin: 0px;
+            }
+            li {
+                @include media(">tablet") {
+                    display: inline;
+                    margin: 0;
+                }
+                a {
+                    @include navButtonLight;
+                    @include media(">tablet") {
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                    }
+                } //./a
+            } //./li
+        } //./ul
+    } //./nav
+    .top-bar{
+        @extend %top-bar;
+    }
+}
+
+.nav-placeholder {
+    display: none;
+}
