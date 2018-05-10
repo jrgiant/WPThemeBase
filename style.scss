@@ -1,4 +1,4 @@
-$version: "0.0.4";
+$version: "0.0.6";
 /*
 Theme Name: All About Them Angles
 Theme URI: http://themes.jrgiantdev.com/AllAboutThemAngles;
@@ -17,24 +17,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 //add the includes
 @import "assets/scss/scss-includes.scss";
-@mixin navButton {
-    padding: 10px; //background-color: gray;
-    color: black;
-    font-size: 1.5rem;
-    margin: 5px 0 0 0;
-    display: block;
-    text-decoration: none; //border-radius: 5px;
-    transition: all 0.3s, padding 0.3s;
-    @include media(">tablet") {
-        display: inline-block;
-        font-size: 1rem;
-    }
-    &:hover,
-    &:active {
-        background-color: green; //padding: .5rem;
-        font-size: 1.7rem;
-    }
-}
+
 
 @mixin offScreen {
     transform: translateX(100vw);
@@ -53,23 +36,24 @@ body {
         width: 94vw;
         padding: 3vw;
         @include offScreen;
-        background-color: rgba(20, 20, 20, 0.9); // position: absolute;
+        background-color: map-get($colors, darkBackground);
+         // position: absolute;
         top: 6vh;
     }
     nav {
-        border-top: 1px solid lightgrey;
-        border-bottom: 1px solid lightgrey; //width:100%;
+        //border-top: 1px solid lightgrey;
+        border-bottom: 1px solid map-get($map: $colors, $key: lineAccents); //width:100%;
         &.sticky {
             @include media(">tablet") {
                 position: fixed;
                 top: 0px;
                 left: 0;
                 right: 0;
-                background-color: rgba(0, 0, 0, .6);
+                background-color: rgba(map-get($map: $colors, $key: darkBackground), .7);
                 opacity: 0;
                 transition: all .3s linear;
                 a {
-                    color: white;
+                    color: map-get($map: $colors, $key: lightText4darkBackground);
                 }
             }
         }
@@ -78,13 +62,20 @@ body {
             text-align: center;
             list-style: none;
             padding-left: 0px;
+            @include media(">tablet"){
+                margin:0px;
+            }
             li {
                 @include media(">tablet") {
                     display: inline;
                     margin: 0;
                 }
                 a {
-                    @include navButton;
+                    @include navButtonLight;
+                    @include media(">tablet"){
+                                padding-top: 20px;
+                                padding-bottom: 20px;
+                    }
                 } //./a
             } //./li
         } //./ul
@@ -98,15 +89,15 @@ body {
             top: 0;
             left: 0;
             right: 0;
-            background-color: rgba(0, 0, 0, .8);
-            height: 7vh;
-            min-height: 3.5rem;
+            background-color: rgba(map-get($colors,darkBackground), .95);
+            height: 5vh;
+            min-height: 3rem;
         }
         div {
             &.left {
                 //background-color: red;
                 &, a {
-                    color: white;
+                    color: map-get($map: $colors, $key: lightText4darkBackground);
                 }
                 a {
                     text-decoration: none;
@@ -121,8 +112,11 @@ body {
                 }
             }
             &.right {
-                @include navButton;
-                background-color: blue;
+                @include navButtonDark;
+                background-color: map-get($map: $colors, $key: accent1);
+                &:hover{
+                    background-color: lighten($color: map-get($map: $colors, $key: accent1), $amount:5);
+                }
                 @include media(">tablet") {
                     position: absolute;
                     top: 5px;
@@ -140,10 +134,10 @@ body {
         right: 0;
         top: 0;
         width: 100%;
-        background-color: dimgrey;
+        background-color: map-get($map: $colors, $key:darkBackground );
         height: 6vh;
         text-align: center;
-        color: #fff;
+        color: map-get($map: $colors, $key: lightText4darkBackground);
         h1 {
             margin-top: 1vh;
         }
@@ -155,7 +149,7 @@ body {
                 &,
                 &::before,
                 &::after {
-                    background-color: white;
+                    background-color: map-get($map: $colors, $key: lightText4darkBackground);
                 }
             }
         } //width:100vw;
@@ -183,7 +177,7 @@ body {
         position: absolute;
         top: 40vh;
         width: 100%;
-        color: white;
+        color: map-get($map: $colors, $key: lightText4darkBackground);
     }
 }
 
