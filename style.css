@@ -4,7 +4,7 @@ Theme URI: http://themes.jrgiantdev.com/AllAboutThemAngles;
 Author: Joshua Rose
 Author URI: http://jrgiantdev.com
 Description: Tired of the flat boxy blogs, take angles out for a spin.
-Version: 0.0.3;
+Version: 0.0.4;
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: angles
@@ -74,13 +74,17 @@ body {
       background-color: rgba(0, 0, 0, 0.8);
       height: 7vh;
       min-height: 3.5rem; } }
-  .navigation .top-bar div.left {
+  .navigation .top-bar div.left, .navigation .top-bar div.left a {
     color: white; }
-    @media (min-width: 769px) {
-      .navigation .top-bar div.left {
-        position: absolute;
-        top: 15px;
-        left: 10px; } }
+  .navigation .top-bar div.left a {
+    text-decoration: none; }
+    .navigation .top-bar div.left a:hover {
+      text-decoration: underline; }
+  @media (min-width: 769px) {
+    .navigation .top-bar div.left {
+      position: absolute;
+      top: 15px;
+      left: 10px; } }
   .navigation .top-bar div.right {
     padding: 10px;
     color: black;

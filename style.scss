@@ -1,4 +1,4 @@
-$version: "0.0.3";
+$version: "0.0.4";
 /*
 Theme Name: All About Them Angles
 Theme URI: http://themes.jrgiantdev.com/AllAboutThemAngles;
@@ -105,7 +105,15 @@ body {
         div {
             &.left {
                 //background-color: red;
-                color: white;
+                &, a {
+                    color: white;
+                }
+                a {
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
                 @include media(">tablet") {
                     position: absolute;
                     top: 15px;
