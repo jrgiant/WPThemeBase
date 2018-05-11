@@ -1,7 +1,7 @@
 <?php
 if (!function_exists('aata_style')){
     function aata_style(){
-        wp_enqueue_style( 'aata_core_styles', get_stylesheet_uri(), array(), '0.0.2', 'screen' );
+        wp_enqueue_style( 'aata_core_styles', get_stylesheet_uri(), array(), '0.0.8', 'screen' );
     }
 }
 add_action( 'wp_enqueue_scripts', 'aata_style');
