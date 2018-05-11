@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <?php require_once("util/util.php"); ?>
+    <?php require_once "util/util.php";?>
     <?php wp_head();?>
 </head>
 <body>
@@ -21,20 +21,19 @@
   <h1><?php bloginfo();?></h1>
 </div>
 <div class="navigation">
-    <?php if (get_theme_mod( 'show_top_bar', 'show' ) === "show"): ?>
+    <?php if (get_theme_mod('show_top_bar', 'show') === "show"): ?>
   <div class="top-bar">
-    <div class="left"><?php echo get_theme_mod( 'top_bar_left', "Enter information" );?></div>
-    <div class="right"><?php echo get_theme_mod('top_bar_right', "Add a call to Action!");?></div>
-</div>
+    <div class="left"><?php echo get_theme_mod('top_bar_left', "Enter information"); ?></div>
+    <div class="right"><?php echo get_theme_mod('top_bar_right', "Add a call to Action!"); ?></div>
   </div>
-  <?php endif; ?>
+  <?php endif;?>
   <!--./top-bar-->
   <nav>
-   <?php 
-    wp_nav_menu();
-   ?>
+   <?php
+wp_nav_menu();
+?>
   </nav>
-  
+
 </div>
 <div class="nav-placeholder"></div>
 
