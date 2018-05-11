@@ -19,7 +19,7 @@
 </div>
 <div class="site-title">
   <div class="filter"></div>
-        <video autoplay loop>
+        <video autoplay loop muted>
             <source src="<?php echo trailingslashit(get_template_directory_uri()); ?>assets/media/Typing.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
             <source src="<?php echo trailingslashit(get_template_directory_uri()); ?>assets/media/Typing.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
         </video>
