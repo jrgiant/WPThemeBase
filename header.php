@@ -24,7 +24,8 @@
     <?php if (get_theme_mod( 'show_top_bar', 'show' ) === "show"): ?>
   <div class="top-bar">
     <div class="left"><?php echo get_theme_mod( 'top_bar_left', "Enter information" );?></div>
-    <div class="right">Item 2</div>
+    <div class="right"><?php echo get_theme_mod('top_bar_right', "Add a call to Action!");?></div>
+</div>
   </div>
   <?php endif; ?>
   <!--./top-bar-->

@@ -39,7 +39,7 @@ if (!function_exists('aata_customize_register')): //allow for easy child theme o
             'active_callback' => 'allaboutthemangles_is_active',
         ));
         /**
-         * Top bar - right
+         * Top bar - left
          */
         $wp_customize->add_setting('top_bar_left', array(
             "default" => 'Enter informaiton about your business',
@@ -48,6 +48,27 @@ if (!function_exists('aata_customize_register')): //allow for easy child theme o
 
         ));
         $wp_customize->add_control('top_bar_left', array(
+            'label' => __("Top Bar Left", "allaboutthemangles"),
+            'section' => 'Header',
+            'type' => 'text',
+            'description' => 'Enter informaiton about your business. HTML accepted',
+            'active_callback' => 'allaboutthemangles_is_active',
+        ));
+        $wp_customize->selective_refresh->add_partial('top_bar_left', array(
+            'selector' => '.top-bar div.left',
+            'render_callback' => 'allaboutthemangles_topbar',
+            'container_inclusive' => true,
+        ));
+/**
+ * Top bar - right
+ */
+        $wp_customize->add_setting('top_bar_right', array(
+            "default" => '<div class="button">Call to Action</div>',
+            'sanitize_callback' => 'allaboutthemangles_sanitize_html',
+            'transport' => 'refresh',
+
+        ));
+        $wp_customize->add_control('top_bar_right', array(
             'label' => __("Top Bar Right", "allaboutthemangles"),
             'section' => 'Header',
             'type' => 'text',
@@ -55,13 +76,11 @@ if (!function_exists('aata_customize_register')): //allow for easy child theme o
             'active_callback' => 'allaboutthemangles_is_active',
         ));
         $wp_customize->selective_refresh->add_partial('top_bar_right', array(
-            'selector'            => '.top-bar div.left',
-			'render_callback'     => 'allaboutthemangles_topbar',
-			'container_inclusive' => true,
+            'selector' => '.top-bar div.right',
+            'render_callback' => 'allaboutthemangles_topbar',
+            'container_inclusive' => true,
         ));
 
-        //TODO: add Top bar right
-        //TODO: add Top bar Left
 
         //TODO: add main image
         //TODO: Add video support
@@ -89,8 +108,9 @@ function allaboutthemangles_sanitize_show_top_bar($input)
     return '';
 
 }
-function allaboutthemangles_sanitize_html($input){
-    return wp_kses_post( $input );
+function allaboutthemangles_sanitize_html($input)
+{
+    return wp_kses_post($input);
 }
 /**
  * Return whether All about them angles will work on this page
