@@ -112,8 +112,8 @@ add_action('customize_preview_init', 'allaboutthemangles_customize_preview_js');
 /**
  * Load dynamic logic for the customizer controls area.
  */
-// function allaboutthemangles_panels_js()
-// {
-//     wp_enqueue_script('allaboutthemangles-customize-controls', get_theme_file_uri('/customizer/customize-controls.js'), array(), '0.1.0', true);
-// }
-// add_action('customize_controls_enqueue_scripts', 'allaboutthemangles_panels_js');
+function allaboutthemangles_panels_js()
+{
+    wp_enqueue_script('allaboutthemangles-customizer-controls', get_theme_file_uri('/customizer/customizer-controls.js'), array(), '0.1.2', true);
+}
+add_action('customize_controls_enqueue_scripts', 'allaboutthemangles_panels_js');
