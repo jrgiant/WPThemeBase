@@ -1,4 +1,4 @@
-$version: "0.0.8";
+$version: "0.0.9";
 /*
 Theme Name: All About Them Angles
 Theme URI: http://themes.jrgiantdev.com/AllAboutThemAngles;
@@ -29,10 +29,22 @@ body {
 .site-title {
     background: lightblue url('https://placeimg.com/2000/2000/tech') no-repeat fixed center;
     background-size: cover;
-    height: 80vh;
     position: relative;
-    width: 100%;
+     height: 80vh;
     text-align: center;
+    overflow:hidden;
+    &, video{
+        
+         width: 100%;
+    }
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
     h1 {
         position: absolute;
         top: 40vh;
