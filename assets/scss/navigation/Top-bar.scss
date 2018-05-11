@@ -12,18 +12,22 @@
             min-height: 3rem;
         }
         div {
+             a {
+                 color: map-get($map: $colors, $key: lightText4darkBackground);
+                 text-decoration: none;
+                 &:hover {
+                     text-decoration: underline;
+                 }
+             }
+             button, .button {
+                  @include navButtonDark;
+                  background-color: map-get($map: $colors, $key: accent1);
+                  &:hover {
+                      background-color: lighten($color: map-get($map: $colors, $key: accent1), $amount:5);
+                  }
+             }
             &.left {
                 //background-color: red;
-                &,
-                a {
-                    color: map-get($map: $colors, $key: lightText4darkBackground);
-                }
-                a {
-                    text-decoration: none;
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
                 @include media(">tablet") {
                     position: absolute;
                     top: 15px;
@@ -31,11 +35,6 @@
                 }
             }
             &.right {
-                @include navButtonDark;
-                background-color: map-get($map: $colors, $key: accent1);
-                &:hover {
-                    background-color: lighten($color: map-get($map: $colors, $key: accent1), $amount:5);
-                }
                 @include media(">tablet") {
                     position: absolute;
                     top: 5px;

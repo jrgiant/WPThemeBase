@@ -13,7 +13,7 @@ Text Domain: allaboutthemangles
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-.navigation .top-bar div.right, .navigation nav ul li a {
+.navigation .top-bar div button, .navigation .top-bar div .button, .navigation nav ul li a {
   padding: 10px;
   font-size: 1.5rem;
   margin: 5px 0 0 0;
@@ -21,7 +21,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   text-decoration: none;
   transition: all 0.3s, padding 0.3s; }
   @media (min-width: 769px) {
-    .navigation .top-bar div.right, .navigation nav ul li a {
+    .navigation .top-bar div button, .navigation .top-bar div .button, .navigation nav ul li a {
       display: inline-block;
       font-size: 1rem;
       margin-top: 0px; } }
@@ -37,30 +37,28 @@ Use it to make something cool, have fun, and share what you've learned with othe
       background-color: rgba(85, 88, 93, 0.95);
       height: 5vh;
       min-height: 3rem; } }
-  .navigation .top-bar div.left,
-  .navigation .top-bar div.left a {
-    color: #e1e8f0; }
-  .navigation .top-bar div.left a {
+  .navigation .top-bar div a {
+    color: #e1e8f0;
     text-decoration: none; }
-    .navigation .top-bar div.left a:hover {
+    .navigation .top-bar div a:hover {
       text-decoration: underline; }
+  .navigation .top-bar div button, .navigation .top-bar div .button {
+    background-color: #55585d;
+    background-color: #9068be; }
+    .navigation .top-bar div button:hover, .navigation .top-bar div button:active, .navigation .top-bar div .button:hover, .navigation .top-bar div .button:active {
+      background-color: #5c6065; }
+    .navigation .top-bar div button:hover, .navigation .top-bar div .button:hover {
+      background-color: #9d7ac6; }
   @media (min-width: 769px) {
     .navigation .top-bar div.left {
       position: absolute;
       top: 15px;
       left: 10px; } }
-  .navigation .top-bar div.right {
-    background-color: #55585d;
-    background-color: #9068be; }
-    .navigation .top-bar div.right:hover, .navigation .top-bar div.right:active {
-      background-color: #5c6065; }
-    .navigation .top-bar div.right:hover {
-      background-color: #9d7ac6; }
-    @media (min-width: 769px) {
-      .navigation .top-bar div.right {
-        position: absolute;
-        top: 5px;
-        right: 10px; } }
+  @media (min-width: 769px) {
+    .navigation .top-bar div.right {
+      position: absolute;
+      top: 5px;
+      right: 10px; } }
 
 @media (max-width: 767px) {
   .navigation {
