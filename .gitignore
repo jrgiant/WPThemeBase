@@ -1,4 +1,4 @@
-# Created by https://www.gitignore.io/api/node,linux,windows,wordpress
+# Created by https://www.gitignore.io/api/node,linux,windows,wordpress,sass
 
 ### Linux ###
 *~
@@ -76,6 +76,10 @@ typings/
 .env
 
 
+### Sass ###
+.sass-cache/
+*.css.map
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -117,4 +121,4 @@ wp-content/plugins/hello.php
 
 
 
-# End of https://www.gitignore.io/api/node,linux,windows,wordpress
+# End of https://www.gitignore.io/api/node,linux,windows,wordpress,sass

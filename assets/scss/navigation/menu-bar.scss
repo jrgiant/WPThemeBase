@@ -1,0 +1,34 @@
+#menu-bar {
+    @include media("<tablet") {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        background-color: map-get($map: $colors, $key:darkBackground);
+        height: 6vh;
+        text-align: center;
+        color: map-get($map: $colors, $key: lightText4darkBackground);
+        h1 {
+            margin-top: 1vh;
+        }
+        button {
+            position: absolute;
+            right: 10px;
+            top: 0.5vh;
+            .hamburger-inner {
+                &,
+                &::before,
+                &::after {
+                    background-color: map-get($map: $colors, $key: lightText4darkBackground);
+                }
+            }
+        } //width:100vw;
+    }
+    .hamburger,
+    h1 {
+        @include media(">tablet") {
+            display: none;
+        }
+    }
+}

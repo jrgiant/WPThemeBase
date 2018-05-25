@@ -1,0 +1,45 @@
+    %top-bar {
+        //@include offScreen;
+        //margin-top: 60px;
+        text-align: center;
+        @include media(">tablet") {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(map-get($colors, darkBackground), .95);
+            height: 5vh;
+            min-height: 3rem;
+        }
+        div {
+             a {
+                 color: map-get($map: $colors, $key: lightText4darkBackground);
+                 text-decoration: none;
+                 &:hover {
+                     text-decoration: underline;
+                 }
+             }
+             button, .button {
+                  @include navButtonDark;
+                  background-color: map-get($map: $colors, $key: accent1);
+                  &:hover {
+                      background-color: lighten($color: map-get($map: $colors, $key: accent1), $amount:5);
+                  }
+             }
+            &.left {
+                //background-color: red;
+                @include media(">tablet") {
+                    position: absolute;
+                    top: 15px;
+                    left: 10px;
+                }
+            }
+            &.right {
+                @include media(">tablet") {
+                    position: absolute;
+                    top: 5px;
+                    right: 10px;
+                }
+            }
+        }
+    }

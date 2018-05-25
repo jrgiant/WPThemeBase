@@ -1,0 +1,65 @@
+$version: "0.0.9";
+/*
+Theme Name: All About Them Angles
+Theme URI: http://themes.jrgiantdev.com/AllAboutThemAngles;
+Author: Joshua Rose
+Author URI: http://jrgiantdev.com
+Description: Tired of the flat boxy blogs, take angles out for a spin.
+Version: #{$version};
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: angles
+Text Domain: allaboutthemangles
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+//add the includes
+@import "assets/scss/scss-includes.scss";
+
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.site-title {
+    background: lightblue url('https://placeimg.com/2000/2000/tech') no-repeat fixed center;
+    background-size: cover;
+    position: relative;
+     height: 80vh;
+    text-align: center;
+    overflow:hidden;
+    &, video{
+        
+         width: 100%;
+    }
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+    h1 {
+        position: absolute;
+        top: 40vh;
+        width: 100%;
+        color: map-get($map: $colors, $key: lightText4darkBackground);
+    }
+}
+
+.main-content {
+    margin-top: 7vh; //overflow:hidden;
+    &,
+    img {
+        width: 100%;
+    }
+    @include media(">tablet") {
+        margin-top: 0vh;
+    }
+}
