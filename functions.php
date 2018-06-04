@@ -1,4 +1,8 @@
 <?php
+ini_set('upload_max_size', '64M');
+ini_set('post_max_size', '64M');
+ini_set('max_execution_time', '300');
+
 if (!function_exists('aata_style')){
     function aata_style(){
         wp_enqueue_style( 'aata_core_styles', get_stylesheet_uri(), array(), '0.0.9', 'screen' );

@@ -92,16 +92,27 @@ if (!function_exists('aata_customize_register')): //allow for easy child theme o
         $wp_customize->add_control('header_media_type', array(
             "label" => __("Header Image Type", "allaboutthemangles"),
             "section" => 'Header',
-            'type'=> 'radio',
+            'type' => 'radio',
             'description' => 'Select the type of media used in your header',
             'active_callback' => 'allaboutthemangles_is_active',
             'choices' => array(
                 'video' => __('Video', "allaboutthemangles"),
-                'Image' => __('Image', "allaboutthemangles"),
+                'image' => __('Image', "allaboutthemangles"),
             ),
         ));
-
-
+        // $wp_customize->add_setting('header_upload_video', array(
+        //     "transport" => 'refresh',
+        // ));
+        // $wp_customize->add_control(
+        //     new WP_Customize_Upload_Control(
+        //         $wp_customize,
+        //         'header_upload_video',
+        //         array(
+        //             'label' => __('Background Image', 'allaboutthemangles'),
+        //             'section' => 'Header',
+        //             'settings' => 'header_upload_video',
+        //         ))
+        // );
 
         //TODO: add main image
         //TODO: Add video support
@@ -123,7 +134,6 @@ function allaboutthemangles_sanitize_show_top_bar($input)
     );
     return allaboutthemangles_sanitize_radio_field($input, $valid);
 
-
 }
 function allaboutthemangles_sanitize_header_media_type($input)
 {
@@ -131,11 +141,11 @@ function allaboutthemangles_sanitize_header_media_type($input)
         'video' => __('Video', "allaboutthemangles"),
         'image' => __('Image', "allaboutthemangles"),
     );
-    return allaboutthemangles_sanitize_radio_field($input,$valid);
-
+    return allaboutthemangles_sanitize_radio_field($input, $valid);
 
 }
-function allaboutthemangles_sanitize_radio_field($input, $valid){
+function allaboutthemangles_sanitize_radio_field($input, $valid)
+{
     if (array_key_exists($input, $valid)) {
         return $input;
     }
