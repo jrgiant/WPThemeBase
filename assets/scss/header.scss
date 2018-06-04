@@ -1,0 +1,27 @@
+// animations must be imported before this file
+
+.site-title {
+  height:80vh;
+  width:100vw;
+  background: map-get($map: $colors, $key: lightBackground) url("/assets/media/lucas-gallone-368519-unsplash.jpg") no-repeat fixed center;
+  background-size:cover;
+  position: relative;
+  .filter{
+    width:100%;
+    height:100%;
+    animation: dancingPolygon 15s infinite;
+    background-color:rgba(map-get($map: $colors, $key: darkBackground), .5);
+    position:absolute;
+  } 
+  h1{
+    position:absolute;
+    text-align:center;
+    color:white;
+    font-family:"Yellowtail", cursive;
+    font-weight:400;
+    font-size:10rem;
+    width:100%;
+    margin:0;
+    top:40vh;
+  }
+}

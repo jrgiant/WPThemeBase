@@ -26,6 +26,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
       font-size: 1rem;
       margin-top: 0px; } }
 
+@keyframes dancingPolygon {
+  0%, 100% {
+    -webkit-clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%); }
+  50% {
+    -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%); } }
 .navigation .top-bar {
   text-align: center; }
   @media (min-width: 769px) {
@@ -59,6 +66,29 @@ Use it to make something cool, have fun, and share what you've learned with othe
       position: absolute;
       top: 5px;
       right: 10px; } }
+
+.site-title {
+  height: 80vh;
+  width: 100vw;
+  background: #e1e8f0 url("/assets/media/lucas-gallone-368519-unsplash.jpg") no-repeat fixed center;
+  background-size: cover;
+  position: relative; }
+  .site-title .filter {
+    width: 100%;
+    height: 100%;
+    animation: dancingPolygon 15s infinite;
+    background-color: rgba(85, 88, 93, 0.5);
+    position: absolute; }
+  .site-title h1 {
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-family: "Yellowtail", cursive;
+    font-weight: 400;
+    font-size: 10rem;
+    width: 100%;
+    margin: 0;
+    top: 40vh; }
 
 @media (max-width: 767px) {
   .navigation {
@@ -133,28 +163,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 body {
   padding: 0px;
   margin: 0px; }
-
-.site-title {
-  background: lightblue url("https://placeimg.com/2000/2000/tech") no-repeat fixed center;
-  background-size: cover;
-  position: relative;
-  height: 80vh;
-  text-align: center;
-  overflow: hidden; }
-  .site-title, .site-title video {
-    width: 100%; }
-  .site-title iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; }
-  .site-title h1 {
-    position: absolute;
-    top: 40vh;
-    width: 100%;
-    color: #e1e8f0; }
 
 .main-content {
   margin-top: 7vh; }

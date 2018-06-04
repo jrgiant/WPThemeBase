@@ -1,0 +1,22 @@
+{
+  "name": "wpthemebase",
+  "version": "1.0.0",
+  "description": "Base for theme development",
+  "main": "index.js",
+  "scripts": {
+    "start" : "browser-sync -c bs-config.js start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrgiant/WPThemeBase.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrgiant/WPThemeBase/issues"
+  },
+  "homepage": "https://github.com/jrgiant/WPThemeBase#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.4"
+  }
+}
