@@ -150,13 +150,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .nav-placeholder {
   display: none; }
 
-/*!
- * Hamburgers
- * @description Tasty CSS-animated hamburgers
- * @author Jonathan Suh @jonsuh
- * @site https://jonsuh.com/hamburgers
- * @link https://github.com/jonsuh/hamburgers
- */
 .hamburger {
   padding: 15px 15px;
   display: inline-block;
@@ -201,9 +194,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
   .hamburger-inner::after {
     bottom: -10px; }
 
-/*
- * Collapse
- */
 .hamburger--collapse .hamburger-inner {
   top: auto;
   bottom: 0;
