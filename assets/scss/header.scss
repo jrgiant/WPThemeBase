@@ -19,9 +19,19 @@
     color:white;
     font-family:"Yellowtail", cursive;
     font-weight:400;
-    font-size:10rem;
+    font-size:8rem;
     width:100%;
     margin:0;
-    top:40vh;
+    top:40%;
+    @include media("<desktop",">tablet"){
+        font-size: 6rem;
+    }
+    @include media('<=tablet','>phone'){
+        font-size:4rem;
+        top:40%;
+    }
+    @include media('<=phone'){
+        font-size:2rem;
+    }
   }
 }

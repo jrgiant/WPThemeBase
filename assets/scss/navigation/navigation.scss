@@ -40,8 +40,9 @@
                 a {
                     @include navButtonLight;
                     @include media(">tablet") {
-                        padding-top: 20px;
-                        padding-bottom: 20px;
+                        padding: 20px 70px;
+                        // padding-top: 20px;
+                        // padding-bottom: 20px;
                     }
                 } //./a
             } //./li
