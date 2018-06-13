@@ -36,3 +36,7 @@
     transition: transform 0.3s ease-in;
     position: fixed; //z-index:20;
 }
+@mixin marginAuto{
+    margin-left: auto;
+    margin-right: auto;
+}

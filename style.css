@@ -244,6 +244,84 @@ Use it to make something cool, have fun, and share what you've learned with othe
   #menu-bar h1 {
     display: none; } }
 
+i.facebook {
+  content: url("https://unpkg.com/simple-icons@latest/icons/facebook.svg"); }
+
+i.github {
+  content: url("https://unpkg.com/simple-icons@latest/icons/github.svg"); }
+
+i.twitter {
+  content: url("https://unpkg.com/simple-icons@latest/icons/twitter.svg"); }
+
+i.stackoverflow {
+  content: url("https://unpkg.com/simple-icons@latest/icons/stackoverflow.svg"); }
+
+footer {
+  width: 100%;
+  background-color: #55585d;
+  color: #e1e8f0; }
+  footer a {
+    color: #e1e8f0;
+    text-decoration: none;
+    transition: font-size 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    footer a:hover {
+      font-size: 1.8rem; }
+  footer .footer-sidebars {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1.5rem; }
+    footer .footer-sidebars > div {
+      flex: 1;
+      border-right: #e1e8f0 1px solid;
+      padding: 1% 2%;
+      display: flex;
+      flex-wrap: wrap; }
+      footer .footer-sidebars > div.social-media i {
+        height: 70px;
+        padding: 10px 20px;
+        flex: 1; }
+      footer .footer-sidebars > div.footer-menu {
+        text-align: right; }
+        footer .footer-sidebars > div.footer-menu ul {
+          list-style: none;
+          width: 100%;
+          font-size: 1.5rem;
+          margin-top: 0; }
+          footer .footer-sidebars > div.footer-menu ul:after {
+            clear: both; }
+      footer .footer-sidebars > div.policies a {
+        display: block; }
+      footer .footer-sidebars > div.search span {
+        position: relative;
+        width: 100%; }
+      footer .footer-sidebars > div.search input {
+        height: 1rem;
+        padding: 1rem;
+        width: 100%;
+        display: block; }
+      footer .footer-sidebars > div.search button {
+        background-color: #e1e8f0;
+        border-radius: 20px;
+        width: 80%; }
+      footer .footer-sidebars > div.search i.search {
+        content: url(assets/media/jrgiant-search.svg);
+        position: absolute;
+        top: .5rem;
+        right: -1rem;
+        height: 2rem; }
+    footer .footer-sidebars > div:last-child {
+      border-right: none; }
+  footer .theme-credits {
+    text-align: center;
+    width: 100%; }
+    footer .theme-credits a:hover {
+      font-size: 1.2rem; }
+
 body {
   padding: 0px;
   margin: 0px;

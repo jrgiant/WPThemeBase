@@ -1,3 +1,5 @@
 // This is my storehouse of "make my life easier" functions within scss
-
+@function simpleIcons($name){
+    @return "https://unpkg.com/simple-icons@latest/icons/#{$name}.svg";
+}
 

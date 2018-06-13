@@ -1,0 +1,92 @@
+footer{
+    width:100%;
+    background-color: map-get($map: $colors, $key: darkBackground);
+    color: map-get($map: $colors, $key: lightText4darkBackground);
+    a {
+        color:map-get($map: $colors, $key: lightText4darkBackground);
+        text-decoration: none;
+        transition: font-size .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        &:hover{
+            font-size:1.8rem;
+        }
+    }
+    .footer-sidebars{
+        width:80%;
+        @include marginAuto;
+        display: flex;
+        flex-direction: row;
+        padding-top:15px;
+        padding-bottom: 15px;
+        font-size:1.5rem;
+        &>div{
+            flex: 1;
+            border-right: map-get($map: $colors, $key: lightText4darkBackground) 1px solid;
+            padding: 1% 2%;
+            display: flex;
+            flex-wrap: wrap;
+            &.social-media{
+                i{
+                    height:70px;
+                    padding: 10px 20px;
+                    // margin: 10px;
+                    flex:1;
+                }
+            }
+            &.footer-menu{
+                text-align: right;
+                ul {
+                    list-style: none;
+                    width:100%;
+                    font-size:1.5rem;
+                    margin-top:0;
+                    &:after{
+                        clear: both;
+                    }
+                }
+                
+            }
+            &.policies{
+                a{
+                    display: block;
+                }
+            }
+            &.search{
+                span{
+                    // flex:1;
+                    position: relative;
+                    width: 100%;
+                }
+                input{
+                    height:1rem;
+                    padding:1rem;
+                    width:100%;
+                    display:block;
+                }
+                button{
+                    background-color:map-get($map: $colors, $key: lightBackground);
+                    border-radius: 20px;
+                    width:80%;
+                }
+                i.search{
+                    content: url(assets/media/jrgiant-search.svg);
+                    position: absolute;
+                    top:.5rem;
+                    right:-1rem;
+                    height: 2rem;
+                //     &:after{
+                // }
+                }
+            }
+        }
+        &>div:last-child{
+            border-right: none;
+        }
+    }
+    .theme-credits{
+        text-align: center;
+        width: 100%;
+        a:hover{
+            font-size:1.2rem;
+        }
+    }
+}
